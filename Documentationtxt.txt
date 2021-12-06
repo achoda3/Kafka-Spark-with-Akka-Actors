@@ -1,0 +1,19 @@
+ssh -i "EC2KeyPair.pem" ec2-user@ec2-18-119-137-54.us-east-2.compute.amazonaws.com
+scp -i "C:\Users\aryan\Downloads\EC2KeyPair.pem" "C:\Users\aryan\Desktop\Studies\CS 441\HW3PrivateRepo-1\LogFileUpload\LogFileGenerator\target\scala-3.0.2\GeneratedFatJar.jar"  ec2-user@ec2-18-119-137-54.us-east-2.compute.amazonaws.com:
+sudo yum list | grep openjdk
+sudo yum install java-1.8.0-openjdk.x86_64
+curl -X POST -H "Content-Type: application/json" -d "{ \"bucket\": \"value1\",\"key\": \"input.log\" }" http://localhost:8090
+Created local Kafka Environment to test out topics and their creations
+First did on my WSL, but then since it had a different local host (ip) and windows makes it much harder for my life because 
+of course it does, I downloaded and got kafka for the windows environment. That also had issues because of compatability issues
+and hence, I resulted to just waiting to test it out on the amazon ec2 instance :D
+Create layer to import requests
+wget https://dlcdn.apache.org/kafka/3.0.0/kafka-3.0.0-src.tgz
+wget https://dlcdn.apache.org/spark/spark-3.1.2/spark-3.1.2-bin-hadoop3.2.tgz
+YOUR_SPARK_HOME/bin/spark-submit \
+  --class "SimpleApp" \
+  --master local[4] \
+  target/scala-2.12/simple-project_2.12-1.0.jar
+Had to Add layer to python lambda to get import requests working
+Dependencies added are in folder 
+

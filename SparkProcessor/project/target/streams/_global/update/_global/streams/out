@@ -1,0 +1,4 @@
+[debug] not up to date. inChanged = false, force = false
+[debug] Updating ProjectRef(uri("file:/C:/Users/aryan/Desktop/Studies/CS%20441/CourseProject/SparkProcessor/project/"), "sparkprocessor-build")...
+[warn] Unrecognized repository Scala Plugin Bundled Repository, ignoring it
+[debug] Done updating ProjectRef(uri("file:/C:/Users/aryan/Desktop/Studies/CS%20441/CourseProject/SparkProcessor/project/"), "sparkprocessor-build")
