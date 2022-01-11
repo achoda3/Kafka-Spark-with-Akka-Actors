@@ -11,7 +11,7 @@ import javax.mail.internet.{InternetAddress, MimeMessage}
 // This class reads from the Kafka topic constantly while it runs
 // It basically Streams in the data, and starts aggregating all the
 // WARNS and ERRORS . Finally uses aws ses to give the stakeholders the aggregate
-class Spark {
+object Spark {
   def main(args: Array[String]): Unit = {
     val logger = CreateLogger(this.getClass)
     val config = ConfigFactory.load()
